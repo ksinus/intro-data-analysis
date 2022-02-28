@@ -51,7 +51,6 @@ class YouTube2:
             'test name')
         return plt.gcf()
 
-
     def task4(self) -> pd.DataFrame:
         test = self.trends_df.pivot_table(
             values='views',
@@ -61,6 +60,7 @@ class YouTube2:
             margins=True)
         test.rename(columns={'All':'Всего просмотров'}, inplace=True)
         return test
+
     def task5(self) -> Figure:
         test = self.task4()
         test.replace(np.NaN, 0)
